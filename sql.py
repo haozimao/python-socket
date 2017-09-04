@@ -22,7 +22,7 @@ def sqlread(): #sql读取
         print("no people")
 
 
- #text("money", msg)
+  #text("money", msg)
   cursor.close()
   db.close()
 
@@ -30,17 +30,17 @@ def sqlread(): #sql读取
 def text(name,msg):#写入text
     my_path="D:\\test\\"
     filename=my_path+name+'.txt'
-    file=open(filename,'w',encoding='utf-8')
+    file=open(filename,'w')
     for i in msg:
      file.write(i)
     file.close()
 
 def readvar ():
-    db = pymysql.connect("127.0.0.1", "root", "hu19950615", "world")
+    db = pymysql.connect("127.0.0.1", "root", "密码", "world")
     cursor = db.cursor()
 
 def creatsql():
-    db = pymysql.connect("127.0.0.1", "root", "hu19950615", "world")
+    db = pymysql.connect("127.0.0.1", "root", "密码", "world")
     cursor = db.cursor()
 
     sql = """CREATE TABLE name (
